@@ -28,6 +28,12 @@ const quizData = [
         d: "Application Programming Interface",
         correct: "a"
     }, {
-        question: "What year was "
+        question: "What year was JavaScript Launched?",
+        a: "2020",
+        b: "2001",
+        c: "1998",
+        d: "1995",
+        correct: "d"
+
     }
 ]
