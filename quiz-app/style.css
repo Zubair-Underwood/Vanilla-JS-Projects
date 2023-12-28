@@ -21,6 +21,7 @@ body {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px 5px rgba(100, 100, 100, 0.1);
+    overflow: hidden;
     width: 600px;
     max-width: 100%;
 }
@@ -30,13 +31,46 @@ body {
     padding: 2rem;
 }
 
+h2 {
+
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
 ul {
 
     list-style-type: none;
     padding: 0;
 }
 
-button {
+ul li {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
 
+ul li label {
+    cursor: pointer;
+}
+
+button {
     background: #8e44ad;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-family: inherit;
+    font-size: 1.3rem;
+    width: 100%;
+    padding: 1.3rem;
+    border: none;
+}
+
+button:hover {
+    background: #5f2976;
+}
+
+button:focus {
+
+    background: #42264d;
+    outline: none;
 }
