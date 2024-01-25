@@ -61,19 +61,22 @@ header button {
 
 .fav-meals {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style-type: none;
     padding: 0;
 }
 
 .fav-meals li {
-
-    width: 85px;
+    margin: 5px;
+    width: 75px;
 }
 
 .fav-meals li img {
 
     border: 2px solid #ffffff;
     border-radius: 50%;
+    box-shadow: 0 0 10px 2px #3333331a;
     object-fit: cover;
     height: 70px;
     width: 70px;
@@ -81,5 +84,56 @@ header button {
 
 .fav-meals li span {
 
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.meal {
+    border-radius: 3px;
+    margin: 1.5rem;
+    box-shadow: 0 0 10px 2px #3333331a;
+    overflow: hidden;
+}
+
+.meal-header {
+
+    position: relative;
+}
+
+.meal-header .random {
+
+    position: absolute;
+    top: 1rem;
+    background: #fff;
+    padding: 0.25rem 0.5rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.meal-header img {
+
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+
+}
+
+.meal-body {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.meal-body h4 {
+
+    margin: 0;
+}
+
+.meal-body button {
+
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+
 }
