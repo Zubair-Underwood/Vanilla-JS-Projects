@@ -65,12 +65,21 @@ header button {
     padding: 0;
 }
 
-.fav-meals li {}
+.fav-meals li {
+
+    width: 85px;
+}
 
 .fav-meals li img {
 
+    border: 2px solid #ffffff;
     border-radius: 50%;
     object-fit: cover;
-    height: 75px;
-    width: 75px;
+    height: 70px;
+    width: 70px;
+}
+
+.fav-meals li span {
+
+    font-size: 0.8rem;
 }
