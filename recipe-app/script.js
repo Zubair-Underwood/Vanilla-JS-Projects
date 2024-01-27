@@ -1,5 +1,7 @@
 const meals = document.getElementById("meals");
 
+getRandomMeal();
+
 async function getRandomMeal() {
 
     const resp = await fetch("https://dummyjson.com/products/1");
@@ -13,18 +15,16 @@ async function getRandomMeal() {
     console.log(respData);
 }
 
-getRandomMeal();
-
 async function getMealById(id) {
 
-    const meal = await fetch("https://dummyjson.com/products?limit=10&skip=10&select=title,price=" + id);
+    const meal = await fetch("https://dummyjson.com/products/category/smartphones=" + id);
 
     console.log(meal.json());
 }
 
 async function getMealsBySearch(term) {
 
-    const meals = await fetch("https://dummyjson.com/products/search?q=phone=" + term);
+    const meals = await fetch("https://dummyjson.com/products=" + term);
     console.log(meals.json());
 }
 
@@ -38,9 +38,9 @@ function addMeal(mealData, random = false) {
         <div class="meal-header">
             ${random ?
             `<span class="random">
-                Random Recipe
+                Random Smartphone
             </span>` : ''}
-            <img src="${mealData.thumbnail}" alt="${mealData.thumbnail}">
+            <img src="${mealData.thumbnail}" alt="${mealData.title}">
         </div>
 
         <div class="meal-body">
@@ -52,11 +52,23 @@ function addMeal(mealData, random = false) {
         </div>
     `;
 
-    meal.querySelector('.meal-body .fav-btn').
-        addEventListener('click', (e) => {
-            e.target.classList.toggle("active");
-        });
+    const btn = meal.querySelector('.meal-body .fav-btn');
+    btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+    });
 
     meals.appendChild(meal);
 
 }
+
+function addMealToLS(meal) {
+
+
+
+}
+
+function getMealsFromLS() {
+
+    const mealIds = localStorage.getItem('mealIds');
+}
+
